@@ -1,18 +1,29 @@
 package com.messagingplatform.rest.restservice;
 
+import io.restassured.RestAssured;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.web.server.LocalServerPort;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import static io.restassured.RestAssured.given;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest(webEnvironment =
+		SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class RestServiceApplicationTests {
 
+	@LocalServerPort
+	int port;
+
+	@Before
+	public void setUp() {
+		RestAssured.port = port;
+	}
 	@Test
 	public void contextLoads() {
 	}
