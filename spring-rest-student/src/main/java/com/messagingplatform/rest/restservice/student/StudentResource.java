@@ -64,6 +64,6 @@ public class StudentResource {
 
         student.setId(id);
         studentRepository.save(student);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok().build();
     }
 }
