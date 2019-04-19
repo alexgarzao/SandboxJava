@@ -17,11 +17,13 @@ public class StudentResource {
     private StudentRepository studentRepository;
 
     @GetMapping("/students")
+    @ResponseStatus(value=HttpStatus.OK)
     public List<Student> retrieveAllStudents() {
         return studentRepository.findAll();
     }
 
     @GetMapping("/students/{id}")
+    @ResponseStatus(value=HttpStatus.OK)
     public Student retrieveStudent(@PathVariable long id)  {
         Optional<Student> student = studentRepository.findById(id);
 
@@ -33,7 +35,7 @@ public class StudentResource {
     }
 
     @DeleteMapping("/students/{id}")
-    @ResponseStatus(value= HttpStatus.NO_CONTENT)
+    @ResponseStatus(value=HttpStatus.NO_CONTENT)
     public void deleteStudent(@PathVariable long id) {
         Optional<Student> student = studentRepository.findById(id);
 
