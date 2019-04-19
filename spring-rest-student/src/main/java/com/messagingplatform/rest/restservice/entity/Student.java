@@ -1,4 +1,4 @@
-package com.messagingplatform.rest.restservice.student;
+package com.messagingplatform.rest.restservice.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

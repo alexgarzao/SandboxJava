@@ -1,4 +1,4 @@
-package com.messagingplatform.rest.restservice.student;
+package com.messagingplatform.rest.restservice.adapter;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;

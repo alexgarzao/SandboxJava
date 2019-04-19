@@ -1,6 +1,6 @@
 package com.messagingplatform.rest.restservice;
 
-import com.messagingplatform.rest.restservice.student.Student;
+import com.messagingplatform.rest.restservice.entity.Student;
 import io.restassured.RestAssured;
 import org.json.JSONException;
 import org.json.JSONObject;
